@@ -1,6 +1,8 @@
 import { ExternalLink, Github } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
-import zippyEatsImage from 'figma:asset/c52414ae5a96864f9c39efda9b891884867bb3d4.png';
+import eventPlannerImage from '../assets/IMG_5856.JPG';
+import zippyEatsImage from '../assets/IMG_5806.jpg';
+import luxeFashionImage from '../assets/IMG_5855.JPG';
 
 const projects = [
   {
@@ -14,12 +16,12 @@ const projects = [
   },
   {
     id: 2,
-    title: 'eCommerce Website',
-    description: 'Created full-featured eCommerce website with integrated payment processing.',
-    image: 'https://images.unsplash.com/photo-1727407209320-1fa6ae60ee05?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlY29tbWVyY2UlMjBzaG9wcGluZ3xlbnwxfHx8fDE3Njk5ODkxOTV8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    tags: ['React', 'Node.js', 'Payment Integration', 'Full Stack'],
+    title: 'LuxeFashion',
+    description: 'Built a full-featured online clothing store with product catalog, shopping cart, and checkout functionality.',
+    image: luxeFashionImage,
+    tags: ['React', 'E-commerce', 'Responsive Design', 'Payment Processing'],
     github: 'https://github.com/Alexweb1997',
-    demo: 'https://onyeisiuchenna.wixstudio.com/mysite'
+    demo: 'https://luxefashion-project.netlify.app'
   },
   {
     id: 3,
@@ -37,7 +39,25 @@ const projects = [
     image: zippyEatsImage,
     tags: ['Flutter', 'Real-time', 'API Integration', 'Delivery'],
     github: 'https://github.com/Alexweb1997',
-    demo: zippyEatsImage
+    demo: 'https://example.com'
+  },
+  {
+    id: 5,
+    title: 'Pesto Restaurant',
+    description: 'Created an elegant restaurant website featuring menu showcase, reservation system, and customer testimonials.',
+    image: 'https://images.unsplash.com/photo-1704151598190-1a5f411af6b6',
+    tags: ['React', 'Restaurant', 'Responsive Design', 'Reservations'],
+    github: 'https://github.com/Alexweb1997',
+    demo: 'https://pesto-restaurant-project.netlify.app'
+  },
+  {
+    id: 6,
+    title: 'Event Planner',
+    description: 'Developed a comprehensive event planning application with scheduling, guest management, and vendor coordination features.',
+    image: eventPlannerImage,
+    tags: ['React', 'Event Management', 'Calendar', 'Full Stack'],
+    github: 'https://github.com/Alexweb1997',
+    demo: 'https://event-planner-project1.netlify.app'
   }
 ];
 

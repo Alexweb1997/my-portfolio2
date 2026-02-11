@@ -3,6 +3,7 @@ import { ImageWithFallback } from './figma/ImageWithFallback';
 import eventPlannerImage from '../assets/IMG_5856.JPG';
 import zippyEatsImage from '../assets/IMG_5806.jpg';
 import luxeFashionImage from '../assets/IMG_5855.JPG';
+import eduZenImage from '../assets/IMG_5864.JPG';
 
 const projects = [
   {
@@ -58,6 +59,15 @@ const projects = [
     tags: ['React', 'Event Management', 'Calendar', 'Full Stack'],
     github: 'https://github.com/Alexweb1997',
     demo: 'https://event-planner-project1.netlify.app'
+  },
+  {
+    id: 7,
+    title: 'EduZen Academy',
+    description: 'Created a comprehensive online learning platform with course management, interactive lessons, student progress tracking, and community features.',
+    image: eduZenImage,
+    tags: ['React', 'Education', 'Learning Platform', 'Full Stack'],
+    github: 'https://github.com/Alexweb1997',
+    demo: 'https://eduzen-academy.netlify.app'
   }
 ];
 
@@ -65,7 +75,7 @@ export function Projects() {
   return (
     <section id="projects" className="py-12 sm:py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl text-center mb-4">Featured Projects</h2>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl text-center mb-4">Projects</h2>
         <div className="w-20 h-1 bg-blue-600 mx-auto mb-12"></div>
         
         <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">

@@ -4,6 +4,10 @@ import eventPlannerImage from '../assets/IMG_5856.JPG';
 import zippyEatsImage from '../assets/IMG_5806.jpg';
 import luxeFashionImage from '../assets/IMG_5855.JPG';
 import eduZenImage from '../assets/IMG_5864.JPG';
+import realEstateImage from '../assets/istockphoto-2155879454-612x612.jpg';
+import fieldServiceImage from '../assets/mobile-worker-header-1024x604.jpg.webp';
+import todoListImage from '../assets/to-do-list-app-2.jpg';
+import codeNextImage from '../assets/CodeNext_1.width-500.format-webp.webp';
 
 const projects = [
   {
@@ -26,15 +30,6 @@ const projects = [
   },
   {
     id: 3,
-    title: 'Social Media App',
-    description: 'Built social media application with real-time messaging and interactive user features.',
-    image: 'https://images.unsplash.com/photo-1762330462311-f75969906e16?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzb2NpYWwlMjBtZWRpYSUyMG1vYmlsZSUyMGFwcHxlbnwxfHx8fDE3NzAwNTI4NTZ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    tags: ['React Native', 'Real-time', 'Firebase', 'Social Features'],
-    github: 'https://github.com/Alexweb1997',
-    demo: 'https://example.com'
-  },
-  {
-    id: 4,
     title: 'ZippyEats Mobile App',
     description: 'Built for real-time restaurant ordering and delivery services.',
     image: zippyEatsImage,
@@ -43,7 +38,7 @@ const projects = [
     demo: 'https://example.com'
   },
   {
-    id: 5,
+    id: 4,
     title: 'Pesto Restaurant',
     description: 'Created an elegant restaurant website featuring menu showcase, reservation system, and customer testimonials.',
     image: 'https://images.unsplash.com/photo-1704151598190-1a5f411af6b6',
@@ -52,7 +47,7 @@ const projects = [
     demo: 'https://pesto-restaurant-project.netlify.app'
   },
   {
-    id: 6,
+    id: 5,
     title: 'Event Planner',
     description: 'Developed a comprehensive event planning application with scheduling, guest management, and vendor coordination features.',
     image: eventPlannerImage,
@@ -61,13 +56,85 @@ const projects = [
     demo: 'https://event-planner-project1.netlify.app'
   },
   {
-    id: 7,
+    id: 6,
     title: 'EduZen Academy',
     description: 'Created a comprehensive online learning platform with course management, interactive lessons, student progress tracking, and community features.',
     image: eduZenImage,
     tags: ['React', 'Education', 'Learning Platform', 'Full Stack'],
     github: 'https://github.com/Alexweb1997',
     demo: 'https://eduzen-academy.netlify.app'
+  },
+  {
+    id: 7,
+    title: 'Real Estate Listing',
+    description: 'Built a modern real estate platform with property listings, advanced search filters, property details, and virtual tours.',
+    image: realEstateImage,
+    tags: ['React', 'Real Estate', 'Property Listings', 'Maps'],
+    github: 'https://github.com/Alexweb1997',
+    demo: 'https://real-estate-listing-project.netlify.app'
+  },
+  {
+    id: 8,
+    title: 'Pet Care Mobile App',
+    description: 'Developed a comprehensive pet care application with pet health tracking, veterinary services, grooming bookings, and community features.',
+    image: 'https://images.unsplash.com/photo-1561037404-61cd46aa615b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixlib=rb-4.1.0&q=80&w=1080',
+    tags: ['React Native', 'Pet Care', 'Health Tracking', 'Mobile App'],
+    github: 'https://github.com/Alexweb1997',
+    demo: 'https://preview.builtwithrocket.new/pet-care-qkqfu69'
+  },
+  {
+    id: 9,
+    title: 'Sonara Player',
+    description: 'Built a modern music streaming player application with playlist management, audio controls, and personalized recommendations.',
+    image: 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixlib=rb-4.1.0&q=80&w=1080',
+    tags: ['React Native', 'Music Player', 'Audio Streaming', 'Mobile'],
+    github: 'https://github.com/Alexweb1997',
+    demo: 'https://preview.builtwithrocket.new/sonara-player-uu3pi80'
+  },
+  {
+    id: 10,
+    title: 'Gym Management Mobile App',
+    description: 'Created a comprehensive gym management application with membership tracking, workout plans, class scheduling, and progress analytics.',
+    image: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixlib=rb-4.1.0&q=80&w=1080',
+    tags: ['React Native', 'Fitness', 'Membership Management', 'Mobile App'],
+    github: 'https://github.com/Alexweb1997',
+    demo: 'https://preview.builtwithrocket.new/gym-management-9lpq443'
+  },
+  {
+    id: 11,
+    title: 'Field Service Worker Mobile App',
+    description: 'Developed a field service management application with job scheduling, task tracking, real-time location updates, and work order management.',
+    image: fieldServiceImage,
+    tags: ['React Native', 'Field Service', 'GPS Tracking', 'Mobile App'],
+    github: 'https://github.com/Alexweb1997',
+    demo: 'https://preview.builtwithrocket.new/field-service-worker-8k6rs24'
+  },
+  {
+    id: 12,
+    title: 'To-Do List Mobile App',
+    description: 'Built a productivity-focused to-do list application with task organization, reminders, categories, and progress tracking.',
+    image: todoListImage,
+    tags: ['React Native', 'Productivity', 'Task Management', 'Mobile App'],
+    github: 'https://github.com/Alexweb1997',
+    demo: 'https://preview.builtwithrocket.new/to-do-list-5ih1a25'
+  },
+  {
+    id: 13,
+    title: 'CodeNext Generation',
+    description: 'Designed a professional consulting firm website with service offerings, case studies, team profiles, and client testimonials.',
+    image: codeNextImage,
+    tags: ['React', 'Consulting', 'Corporate Website', 'Responsive Design'],
+    github: 'https://github.com/Alexweb1997',
+    demo: 'https://codenext-generation.netlify.app'
+  },
+  {
+    id: 14,
+    title: 'Nexus Consulting',
+    description: 'Built a modern consulting services website with portfolio showcasing, service details, project analytics, and contact management.',
+    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixlib=rb-4.1.0&q=80&w=1080',
+    tags: ['React', 'Business Solutions', 'Web Design', 'Corporate'],
+    github: 'https://github.com/Alexweb1997',
+    demo: 'https://nexus-consulting-project.netlify.app'
   }
 ];
 

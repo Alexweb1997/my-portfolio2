@@ -6,7 +6,6 @@ const skillCategories = [
     skills: [
       { name: 'HTML', level: 100, icon: Code },
       { name: 'CSS', level: 100, icon: Layers },
-      { name: 'JavaScript', level: 100, icon: Code },
       { name: 'React', level: 100, icon: Zap },
       { name: 'Python', level: 100, icon: Code }
     ]
@@ -15,10 +14,7 @@ const skillCategories = [
     title: 'Mobile Development',
     skills: [
       { name: 'React Native', level: 100, icon: Smartphone },
-      { name: 'Flutter', level: 100, icon: Smartphone },
-      { name: 'Dart', level: 100, icon: Code },
-      { name: 'Kotlin', level: 100, icon: Smartphone },
-      { name: 'Swift', level: 100, icon: Smartphone }
+      { name: 'Flutter', level: 100, icon: Smartphone }
     ]
   },
   {
@@ -28,15 +24,7 @@ const skillCategories = [
       { name: 'Git/GitHub', level: 100, icon: GitBranch },
       { name: 'Firebase', level: 100, icon: Database },
       { name: 'Supabase', level: 100, icon: Database },
-      { name: 'Postman', level: 100, icon: Zap }
-    ]
-  },
-  {
-    title: 'AI Tools',
-    skills: [
-      { name: 'Cursor AI', level: 100, icon: Cpu },
-      { name: 'Claude AI', level: 100, icon: Bot },
-      { name: 'ChatGPT', level: 100, icon: Sparkles }
+      { name: 'Python', level: 100, icon: Code }
     ]
   }
 ];
@@ -47,7 +35,7 @@ export function Skills() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl sm:text-4xl md:text-5xl text-center mb-4">Skills & Expertise</h2>
         <div className="w-20 h-1 bg-blue-600 mx-auto mb-12"></div>
-        
+
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {skillCategories.map((category) => (
             <div key={category.title} className="bg-gray-50 p-4 sm:p-6 rounded-lg">

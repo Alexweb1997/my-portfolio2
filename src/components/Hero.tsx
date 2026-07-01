@@ -59,7 +59,7 @@ export function Hero() {
           <a href="#projects" className="border-2 border-gray-900 text-gray-900 px-6 sm:px-8 py-2.5 sm:py-3 rounded-full hover:bg-gray-900 hover:text-white transition-colors text-sm sm:text-base">
             View Work
           </a>
-          <a href="/CV.pdf" download className="border-2 border-gray-900 text-gray-900 px-6 sm:px-8 py-2.5 sm:py-3 rounded-full hover:bg-gray-900 hover:text-white transition-colors inline-flex items-center justify-center gap-2 text-sm sm:text-base">
+          <a href="/Lebenslauf.pdf" download className="border-2 border-gray-900 text-gray-900 px-6 sm:px-8 py-2.5 sm:py-3 rounded-full hover:bg-gray-900 hover:text-white transition-colors inline-flex items-center justify-center gap-2 text-sm sm:text-base">
             <Download size={18} />
             Download CV
           </a>

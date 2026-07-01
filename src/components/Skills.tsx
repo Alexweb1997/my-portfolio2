@@ -1,30 +1,49 @@
-import { Code, Smartphone, Server, Database, GitBranch, Zap, Layers } from 'lucide-react';
+import { Globe, Smartphone, Wrench, Cloud } from 'lucide-react';
 
 const skillCategories = [
   {
-    title: 'Frontend Development',
+    title: 'Web Applications',
+    icon: Globe,
+    description: 'Projects I built for the web using modern frontend and backend technologies.',
     skills: [
-      { name: 'HTML', level: 100, icon: Code },
-      { name: 'CSS', level: 100, icon: Layers },
-      { name: 'React', level: 100, icon: Zap },
-      { name: 'Python', level: 100, icon: Code }
+      'Responsive websites using HTML, CSS',
+      'Interactive web apps using React',
+      'Backend APIs using Node.js + Express',
+      'Full-stack applications (frontend + backend integration)',
+      'Database integration with MongoDB / PostgreSQL / Supabase',
+      'Authentication systems (login / register using JWT)'
     ]
   },
   {
-    title: 'Mobile Development',
+    title: 'Mobile Applications',
+    icon: Smartphone,
+    description: 'Cross platform mobile apps built with React Native.',
     skills: [
-      { name: 'React Native', level: 100, icon: Smartphone },
-      { name: 'Flutter', level: 100, icon: Smartphone }
+      'Mobile apps for Android and iOS',
+      'Built using React Native + Expo',
+      'API integration (fetching real data from backend)',
+      'Navigation between screens',
+      'State management for app data',
+      'Responsive UI for different screen sizes'
     ]
   },
   {
-    title: 'Backend & Tools',
+    title: 'Tools & Technologies',
+    icon: Wrench,
+    description: 'The languages, tools, and platforms I work with day to day.',
     skills: [
-      { name: 'Node.js', level: 100, icon: Server },
-      { name: 'Git/GitHub', level: 100, icon: GitBranch },
-      { name: 'Firebase', level: 100, icon: Database },
-      { name: 'Supabase', level: 100, icon: Database },
-      { name: 'Python', level: 100, icon: Code }
+      'JavaScript, TypeScript',
+      'Node.js / Express',
+      'MongoDB / PostgreSQL / Supabase',
+      'Git & GitHub',
+      'VS Code'
+    ],
+    subGroups: [
+      {
+        title: 'Cloud, Deployment & Services',
+        icon: Cloud,
+        skills: ['Vercel', 'Fly.io', 'Resend']
+      }
     ]
   }
 ];
@@ -36,32 +55,46 @@ export function Skills() {
         <h2 className="text-3xl sm:text-4xl md:text-5xl text-center mb-12">Skills & Expertise</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 w-full">
-          {skillCategories.map((category) => (
-            <div key={category.title} className="bg-gray-50 p-4 sm:p-6 rounded-lg flex flex-col w-full">
-              <h3 className="text-xl sm:text-2xl mb-4 sm:mb-6 text-center">{category.title}</h3>
-              <div className="flex flex-col gap-2 sm:gap-3">
-                {category.skills.map((skill) => {
-                  const IconComponent = skill.icon;
+          {skillCategories.map((category) => {
+            const IconComponent = category.icon;
+            return (
+              <div key={category.title} className="bg-gray-50 p-4 sm:p-6 rounded-lg flex flex-col w-full">
+                <div className="flex items-center gap-2 mb-2">
+                  <IconComponent size={22} className="text-blue-600" />
+                  <h3 className="text-xl sm:text-2xl">{category.title}</h3>
+                </div>
+                <p className="text-sm text-gray-500 mb-4">{category.description}</p>
+                <ul className="flex flex-col gap-2">
+                  {category.skills.map((skill) => (
+                    <li key={skill} className="flex items-start gap-2 text-sm sm:text-base text-gray-700">
+                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-600" />
+                      <span>{skill}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                {category.subGroups?.map((group) => {
+                  const GroupIcon = group.icon;
                   return (
-                    <div key={skill.name}>
-                      <div className="flex items-center mb-1.5 sm:mb-2">
-                        <div className="flex items-center gap-1.5 sm:gap-2">
-                          <IconComponent size={18} className="text-blue-600" />
-                          <span className="text-sm sm:text-base text-gray-700">{skill.name}</span>
-                        </div>
+                    <div key={group.title} className="mt-5">
+                      <div className="flex items-center gap-2 mb-3">
+                        <GroupIcon size={18} className="text-blue-600" />
+                        <h4 className="text-base sm:text-lg text-gray-800">{group.title}</h4>
                       </div>
-                      <div className="w-full bg-gray-200 rounded-full h-2">
-                        <div
-                          className="bg-blue-600 h-2 rounded-full transition-all duration-1000"
-                          style={{ width: `${skill.level}%` }}
-                        />
-                      </div>
+                      <ul className="flex flex-col gap-2">
+                        {group.skills.map((skill) => (
+                          <li key={skill} className="flex items-start gap-2 text-sm sm:text-base text-gray-700">
+                            <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-600" />
+                            <span>{skill}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
                   );
                 })}
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

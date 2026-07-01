@@ -78,8 +78,8 @@ export function Contact() {
                 </div>
                 <div className="min-w-0">
                   <div className="text-base sm:text-lg font-semibold text-white">LinkedIn</div>
-                  <a href="https://www.linkedin.com/in/uchenna-onyeisi-4772b060/" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-gray-300 hover:text-blue-400 break-all">
-                    www.linkedin.com/in/uchenna-onyeisi-4772b060/
+                  <a href="https://www.linkedin.com/in/uchenna-onyeisi-4772b0360/" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-gray-300 hover:text-blue-400 break-all">
+                    www.linkedin.com/in/uchenna-onyeisi-4772b0360/
                   </a>
                 </div>
               </div>

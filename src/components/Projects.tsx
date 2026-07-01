@@ -22,18 +22,18 @@ const projects = [
   {
     id: 2,
     title: 'LuxeFashion',
-    description: 'Built a full-featured online clothing store with product catalog, shopping cart, and checkout functionality.',
+    description: 'Built a fullfeatured online clothing store with product catalog, shopping cart, and checkout functionality.',
     image: luxeFashionImage,
-    tags: ['React', 'E-commerce', 'Responsive Design', 'Payment Processing'],
+    tags: ['React', 'Ecommerce', 'Responsive Design', 'Payment Processing'],
     github: 'https://github.com/Alexweb1997',
     demo: 'https://luxefashion-project.netlify.app'
   },
   {
     id: 3,
     title: 'ZippyEats Mobile App',
-    description: 'Built for real-time restaurant ordering and delivery services.',
+    description: 'Built for realtime restaurant ordering and delivery services.',
     image: zippyEatsImage,
-    tags: ['Flutter', 'Real-time', 'API Integration', 'Delivery'],
+    tags: ['React Native', 'Realtime', 'API Integration', 'Delivery'],
     github: 'https://github.com/Alexweb1997',
     demo: 'https://example.com'
   },
@@ -103,7 +103,7 @@ const projects = [
   {
     id: 11,
     title: 'Field Service Worker Mobile App',
-    description: 'Developed a field service management application with job scheduling, task tracking, real-time location updates, and work order management.',
+    description: 'Developed a field service management application with job scheduling, task tracking, realtime location updates, and work order management.',
     image: fieldServiceImage,
     tags: ['React Native', 'Field Service', 'GPS Tracking', 'Mobile App'],
     github: 'https://github.com/Alexweb1997',
@@ -111,8 +111,8 @@ const projects = [
   },
   {
     id: 12,
-    title: 'To-Do List Mobile App',
-    description: 'Built a productivity-focused to-do list application with task organization, reminders, categories, and progress tracking.',
+    title: 'ToDo List Mobile App',
+    description: 'Built a productivityfocused todo list application with task organization, reminders, categories, and progress tracking.',
     image: todoListImage,
     tags: ['React Native', 'Productivity', 'Task Management', 'Mobile App'],
     github: 'https://github.com/Alexweb1997',

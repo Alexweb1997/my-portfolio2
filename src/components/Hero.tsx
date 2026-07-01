@@ -47,8 +47,8 @@ export function Hero() {
         
         <p className="text-base sm:text-lg text-gray-500 mb-8 sm:mb-12 max-w-3xl mx-auto px-4">
           I am a versatile software developer specializing in both web and mobile app development. 
-          I build modern, responsive applications and have hands-on experience across the full stack. 
-          I'm passionate about technology, innovation, and creating clean, user-focused solutions. 
+          I build modern, responsive applications and have handson experience across the full stack.
+          I'm passionate about technology, innovation, and creating clean, userfocused solutions.
           I'm highly motivated, collaborative, and always excited to learn and take on new challenges.
         </p>
         
@@ -69,13 +69,13 @@ export function Hero() {
           <a href="https://github.com/Alexweb1997" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 transition-colors">
             <Github size={28} />
           </a>
-          <a href="https://www.linkedin.com/in/uchenna-onyeisi-4772b06/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 transition-colors">
+          <a href="https://www.linkedin.com/in/uchenna-onyeisi-4772b0360/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 transition-colors">
             <Linkedin size={28} />
           </a>
           <a href="mailto:Onyeisiuchenna@gmail.com" className="text-gray-600 hover:text-gray-900 transition-colors">
             <Mail size={28} />
           </a>
-          <a href="/CV.pdf" download className="text-gray-600 hover:text-gray-900 transition-colors">
+          <a href="/Lebenslauf.pdf" download className="text-gray-600 hover:text-gray-900 transition-colors">
             <Download size={28} />
           </a>
         </div>

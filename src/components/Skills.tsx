@@ -9,7 +9,7 @@ const skillCategories = [
       'Responsive websites using HTML, CSS',
       'Interactive web apps using React',
       'Backend APIs using Node.js + Express',
-      'Full-stack applications (frontend + backend integration)',
+      'Fullstack applications (frontend + backend integration)',
       'Database integration with MongoDB / PostgreSQL / Supabase',
       'Authentication systems (login / register using JWT)'
     ]

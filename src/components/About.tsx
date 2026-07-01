@@ -10,10 +10,10 @@ export function About() {
         <div className="max-w-3xl mx-auto text-center mb-12 sm:mb-16">
           <p className="text-base sm:text-lg text-gray-600 mb-4 sm:mb-6">
             I am a versatile software developer specializing in both web and mobile app development. 
-            I build modern, responsive applications and have hands-on experience across the full stack.
+            I build modern, responsive applications and have handson experience across the full stack.
           </p>
           <p className="text-base sm:text-lg text-gray-600">
-            I'm passionate about technology, innovation, and creating clean, user-focused solutions. 
+            I'm passionate about technology, innovation, and creating clean, userfocused solutions.
             I'm highly motivated, collaborative, and always excited to learn and take on new challenges.
           </p>
         </div>
@@ -25,7 +25,7 @@ export function About() {
             </div>
             <h3 className="text-lg sm:text-xl mb-2 sm:mb-3">Full Stack Development</h3>
             <p className="text-sm sm:text-base text-gray-600">
-              Experience building complete applications from front-end to back-end with modern technologies
+              Experience building complete applications from frontend to backend with modern technologies
             </p>
           </div>
 
@@ -35,7 +35,7 @@ export function About() {
             </div>
             <h3 className="text-lg sm:text-xl mb-2 sm:mb-3">Mobile Development</h3>
             <p className="text-sm sm:text-base text-gray-600">
-              Creating cross-platform mobile applications with Flutter and React Native
+              Creating crossplatform mobile applications with React Native
             </p>
           </div>
 
@@ -45,7 +45,7 @@ export function About() {
             </div>
             <h3 className="text-lg sm:text-xl mb-2 sm:mb-3">Payment Solutions</h3>
             <p className="text-sm sm:text-base text-gray-600">
-              Delivering secure, high-performance mobile experiences for digital payment systems
+              Delivering secure, highperformance mobile experiences for digital payment systems
             </p>
           </div>
         </div>
@@ -62,17 +62,17 @@ export function About() {
                   <p className="text-sm sm:text-base text-gray-600">Flutterwave</p>
                 </div>
                 <div className="sm:text-right text-sm sm:text-base text-gray-500">
-                  <p>March 2023 - November 2025</p>
-                  <p>Lagos, Nigeria</p>
+                  <p>March 2023 November 2025</p>
+                  <p>Lagos, Nigeria (Remote from Berlin, Germany)</p>
                 </div>
               </div>
               <p className="text-sm sm:text-base text-gray-600 mb-3">
                 I design, build, and maintain mobile applications that power Flutterwave's payment solutions. 
                 I collaborate closely with product managers, designers, and backend engineers to deliver secure, 
-                high-performance mobile experiences.
+                highperformance mobile experiences.
               </p>
               <ul className="text-sm sm:text-base text-gray-600 space-y-1 list-disc list-inside">
-                <li>Collaborated with teams to deliver secure, high-performance experiences</li>
+                <li>Collaborated with teams to deliver secure, highperformance experiences</li>
                 <li>Integrated APIs and improved app reliability and performance</li>
                 <li>Implemented new features enabling seamless digital payments across multiple markets</li>
               </ul>
@@ -85,13 +85,13 @@ export function About() {
                   <p className="text-sm sm:text-base text-gray-600">SkySkillHub</p>
                 </div>
                 <div className="sm:text-right text-sm sm:text-base text-gray-500">
-                  <p>September 2021 - November 2022</p>
+                  <p>September 2021 November 2022</p>
                   <p>Enugu, Nigeria</p>
                 </div>
               </div>
               <ul className="text-sm sm:text-base text-gray-600 space-y-1 list-disc list-inside">
-                <li>Developed cross-platform mobile applications using Flutter and React Native</li>
-                <li>Integrated REST APIs to enable real-time data handling within the app</li>
+                <li>Developed crossplatform mobile applications using React Native</li>
+                <li>Integrated REST APIs to enable realtime data handling within the app</li>
                 <li>Participated in testing, identifying bugs, and preparing builds for deployment</li>
                 <li>Implemented navigation, state management, and reusable widgets/components</li>
               </ul>
@@ -104,13 +104,13 @@ export function About() {
                   <p className="text-sm sm:text-base text-gray-600">SkySkillHub</p>
                 </div>
                 <div className="sm:text-right text-sm sm:text-base text-gray-500">
-                  <p>January 2019 - August 2021</p>
+                  <p>January 2019 August 2021</p>
                   <p>Enugu, Nigeria</p>
                 </div>
               </div>
               <ul className="text-sm sm:text-base text-gray-600 space-y-1 list-disc list-inside">
                 <li>Designed and developed responsive websites using HTML, CSS, and JavaScript</li>
-                <li>Built mobile-friendly layouts using Flexbox, Grid, and modern front-end practices</li>
+                <li>Built mobilefriendly layouts using Flexbox, Grid, and modern frontend practices</li>
                 <li>Collaborated with designers to translate UI/UX wireframes into functional webpages</li>
                 <li>Used Git/GitHub for version control and team collaboration</li>
               </ul>
@@ -129,7 +129,7 @@ export function About() {
                 <p className="text-sm sm:text-base text-gray-600">Institute of Management & Technology</p>
               </div>
               <div className="sm:text-right text-sm sm:text-base text-gray-500">
-                <p>February 2019 - January 2022</p>
+                <p>February 2019 January 2022</p>
                 <p>Enugu, Nigeria</p>
               </div>
             </div>

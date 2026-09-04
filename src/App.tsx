@@ -1,6 +1,6 @@
 import { ArrowDownToLine, ArrowUpRight, Github, Linkedin, Mail, MapPin, Menu, X } from 'lucide-react';
 import { useState } from 'react';
-import portrait from './assets/uchenna-blue-suit.jpg';
+import portrait from './assets/uchenna-hero-portrait.png';
 import restaurant from './assets/project-restaurant.jpg';
 import pesto from './assets/project-pesto.jpg';
 import luxe from './assets/project-luxefashion.jpg';

@@ -1,5 +1,5 @@
 import { ArrowDownToLine, ArrowUpRight, ChevronLeft, ChevronRight, Github, Linkedin, Mail, MapPin, Menu, X } from 'lucide-react';
-import { useState } from 'react';
+import { useState, type FormEvent } from 'react';
 import portrait from './assets/uchenna-hero-portrait.png';
 import restaurant from './assets/project-restaurant.jpg';
 import pesto from './assets/project-pesto.jpg';
@@ -13,11 +13,12 @@ import eventPlanner from './assets/IMG_5856.JPG';
 import fieldService from './assets/mobile-worker-header-1024x604.jpg.webp';
 import todoList from './assets/to-do-list-app-2.jpg';
 import quickStaff from './assets/project-quickstaff.png';
+import { AboutPage } from './AboutPage';
 
 const projects = [
   { number: '01', title: 'Restaurant Website', subtitle: 'Restaurant & ordering', image: restaurant, tags: ['HTML', 'CSS', 'JavaScript'], demo: 'https://emberandash.netlify.app' },
   { number: '02', title: 'Pesto Restaurant', subtitle: 'Restaurant experience', image: pesto, tags: ['React', 'Responsive Design'], demo: 'https://pesto-restaurant-project.netlify.app' },
-  { number: '03', title: 'LuxeFashion', subtitle: 'E-commerce experience', image: luxe, tags: ['React', 'E-commerce', 'Payments'], demo: 'https://luxefashion-project.netlify.app' },
+  { number: '03', title: 'LuxeFashion', subtitle: 'Ecommerce experience', image: luxe, tags: ['React', 'Ecommerce', 'Payments'], demo: 'https://luxefashion-project.netlify.app' },
   { number: '04', title: 'Real Estate Listing', subtitle: 'Property platform', image: realEstate, tags: ['React', 'Maps', 'Listings'], demo: 'https://real-estate-listing-project.netlify.app' },
   { number: '05', title: 'CodeNext Generation', subtitle: 'Technology education', image: codeNext, tags: ['React', 'Consulting', 'Responsive'], demo: 'https://codenext-generation.netlify.app' },
   { number: '06', title: 'EduZen Academy', subtitle: 'Learning platform', image: eduZen, tags: ['React', 'Education', 'Full Stack'], demo: 'https://eduzen-academy.netlify.app' },
@@ -34,7 +35,7 @@ const projects = [
 
 const capabilities = [
   ['Web Applications', 'Fast, accessible, responsive products built with modern frontend tools.'],
-  ['Mobile Applications', 'Cross-platform mobile experiences with React Native and Expo.'],
+  ['Mobile Applications', 'Cross platform mobile experiences with React Native and Expo.'],
   ['Backend & APIs', 'Reliable Node.js APIs, authentication, and database integrations.'],
   ['Cloud & Deployment', 'Production deployments using Vercel, Fly.io, Supabase, and more.'],
 ];
@@ -45,9 +46,34 @@ export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [techStart, setTechStart] = useState(0);
   const [showAllProjects, setShowAllProjects] = useState(false);
+  const [formStatus, setFormStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
   const closeMenu = () => setMenuOpen(false);
   const visibleTechnologies = Array.from({ length: 6 }, (_, index) => technologies[(techStart + index) % technologies.length]);
   const moveTechnologies = (direction: number) => setTechStart((current) => (current + direction + technologies.length) % technologies.length);
+
+  if (window.location.pathname === '/about' || window.location.pathname === '/about/') return <AboutPage />;
+
+  const submitContactForm = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setFormStatus('sending');
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+    const body = new URLSearchParams();
+    formData.forEach((value, key) => body.append(key, String(value)));
+
+    try {
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: body.toString(),
+      });
+      if (!response.ok) throw new Error('Submission failed');
+      form.reset();
+      setFormStatus('success');
+    } catch {
+      setFormStatus('error');
+    }
+  };
 
   return (
     <main>
@@ -55,7 +81,7 @@ export default function App() {
         <a className="wordmark" href="#home" onClick={closeMenu}>UCHENNA<span>.</span></a>
         <button className="menu-button" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">{menuOpen ? <X /> : <Menu />}</button>
         <div className={`nav-links ${menuOpen ? 'open' : ''}`}>
-          <a href="#projects" onClick={closeMenu}>Projects</a><a href="#about" onClick={closeMenu}>About</a>
+          <a href="#projects" onClick={closeMenu}>Projects</a><a href="/about" onClick={closeMenu}>About</a>
           <a href="#experience" onClick={closeMenu}>Experience</a><a href="#contact" onClick={closeMenu}>Contact</a>
           <a className="outline-button" href="#contact" onClick={closeMenu}>Let’s talk</a>
         </div>
@@ -63,9 +89,9 @@ export default function App() {
 
       <section className="hero shell" id="home">
         <div className="hero-copy">
-          <p className="eyebrow">FULL-STACK + MOBILE DEVELOPER · BERLIN</p>
+          <p className="eyebrow">FULL STACK + MOBILE DEVELOPER · BERLIN</p>
           <h1>Building thoughtful digital experiences for web &amp; mobile.</h1>
-          <p className="hero-description">I’m Uchenna Emmanuel Onyeisi. I turn ideas into reliable, user-focused products—from interface to backend.</p>
+          <p className="hero-description">I’m Uchenna Emmanuel Onyeisi. I turn ideas into reliable, user focused products, from interface to backend.</p>
           <div className="hero-actions">
             <a className="solid-button" href="#projects">See my work</a>
             <a className="outline-button" href="/Lebenslauf.pdf" download>Download CV <ArrowDownToLine size={17} /></a>
@@ -93,7 +119,7 @@ export default function App() {
           {(showAllProjects ? projects : projects.slice(0, 3)).map((project) => (
             <a className="project-card" href={project.demo} target="_blank" rel="noreferrer" key={project.title}>
               <div className="project-copy">
-                <span className="project-number">{project.number} —</span><h3>{project.title}</h3><p>{project.subtitle}</p>
+                <span className="project-number">{project.number}</span><h3>{project.title}</h3><p>{project.subtitle}</p>
                 <div className="tags">{project.tags.map(tag => <span key={tag}>{tag}</span>)}</div>
               </div>
               <img src={project.image} alt={`${project.title} project cover`} /><ArrowUpRight className="project-arrow" />
@@ -111,7 +137,7 @@ export default function App() {
       <section className="about section shell" id="about">
         <div>
           <p className="eyebrow">ABOUT ME</p>
-          <h2>Good products feel simple—even when the work behind them <em>isn’t.</em></h2>
+          <h2>Good products feel simple, even when the work behind them <em>isn’t.</em></h2>
           <p>I’m a Full Stack and Mobile Developer based in Berlin. I enjoy solving real problems, writing clean code, and crafting experiences people love to use.</p>
         </div>
         <div className="capabilities">
@@ -125,10 +151,10 @@ export default function App() {
         <div className="shell experience-inner">
           <div><p className="eyebrow">EXPERIENCE</p><h2>Where I’ve<br />worked.</h2></div>
           <div className="timeline">
-            <article><span>2025—Present</span><div><h3>Independent Developer</h3><p>Building Personal &amp; Client Projects</p></div></article>
-            <article><span>2023—2025</span><div><h3>Flutterwave</h3><p>Mobile App Developer</p></div></article>
-            <article><span>2021—2022</span><div><h3>SkySkillHub</h3><p>Mobile App Development Intern</p></div></article>
-            <article><span>2019—2021</span><div><h3>SkySkillHub</h3><p>Web Development Intern</p></div></article>
+            <article><span>2025 to Present</span><div><h3>Independent Developer</h3><p>Building Personal &amp; Client Projects</p></div></article>
+            <article><span>2023 to 2025</span><div><h3>Flutterwave</h3><p>Mobile App Developer</p></div></article>
+            <article><span>2021 to 2022</span><div><h3>SkySkillHub</h3><p>Mobile App Development Intern</p></div></article>
+            <article><span>2019 to 2021</span><div><h3>SkySkillHub</h3><p>Web Development Intern</p></div></article>
           </div>
         </div>
       </section>
@@ -143,7 +169,7 @@ export default function App() {
               <a href="https://www.linkedin.com/in/uchenna-onyeisi-4772b0360/" target="_blank" rel="noreferrer"><Linkedin /> LinkedIn</a>
             </div>
           </div>
-          <form className="contact-form" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+          <form className="contact-form" name="contact" method="POST" action="/" data-netlify="true" data-netlify-honeypot="bot-field" onSubmit={submitContactForm}>
             <input type="hidden" name="form-name" value="contact" />
             <p className="hidden-field"><label>Don’t fill this out: <input name="bot-field" /></label></p>
             <div className="form-row">
@@ -151,7 +177,13 @@ export default function App() {
               <label>Email<input type="email" name="email" placeholder="you@example.com" required /></label>
             </div>
             <label>Message<textarea name="message" rows={5} placeholder="Tell me about your project..." required /></label>
-            <button className="footer-button" type="submit">Send message <ArrowUpRight /></button>
+            <button className="footer-button" type="submit" disabled={formStatus === 'sending'}>
+              {formStatus === 'sending' ? 'Sending…' : 'Send message'} <ArrowUpRight />
+            </button>
+            <div className="form-feedback" aria-live="polite">
+              {formStatus === 'success' && <p className="form-success">Thank you! Your message has been sent successfully.</p>}
+              {formStatus === 'error' && <p className="form-error">The message could not be sent. Please email me directly at <a href="mailto:Onyeisiuchenna@gmail.com">Onyeisiuchenna@gmail.com</a>.</p>}
+            </div>
           </form>
         </div>
       </footer>

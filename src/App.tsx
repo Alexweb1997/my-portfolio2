@@ -136,9 +136,7 @@ export default function App() {
 
       <section className="about section shell" id="about">
         <div>
-          <p className="eyebrow">ABOUT ME</p>
           <h2>Good products feel simple, even when the work behind them <em>isn’t.</em></h2>
-          <p>I’m a Full Stack and Mobile Developer based in Berlin. I enjoy solving real problems, writing clean code, and crafting experiences people love to use.</p>
         </div>
         <div className="capabilities">
           {capabilities.map(([title, description], index) => (
